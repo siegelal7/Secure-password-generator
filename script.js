@@ -14,7 +14,6 @@ function generatePassword() {
   var upperLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var lowerLetters = "abcdefghijklmnopqrstuvwxyz";
   var characters = "!@#$%^&*()";
-
   var numbs = "1234567890";
   var confirmedSelections = "";
   do {
@@ -29,11 +28,6 @@ function generatePassword() {
     var numbers = confirm("Would you like to include numbers?");
     var chars = confirm("Would you like to include characters?");
 
-    //var item = characters[Math.floor(Math.random() * characters.length)];
-    //console.log(item);
-
-    // TODO: gen a real password
-    //return "Still working..";
     if (lowerCase === true) {
       confirmedSelections += lowerLetters;
     }
