@@ -18,7 +18,7 @@ function generatePassword() {
   var confirmedSelections = "";
   do {
     var passwordLength = prompt(
-      "How long would you like your password to be? (max length 128 characters)"
+      "How long would you like your password to be? (between 12 and 128 characters)"
     );
     passwordLength = parseInt(passwordLength);
   } while (passwordLength < 12 || passwordLength > 128);
