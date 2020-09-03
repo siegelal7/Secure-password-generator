@@ -18,10 +18,10 @@ function generatePassword() {
   var confirmedSelections = "";
   do {
     var passwordLength = prompt(
-      "How long would you like your password to be? (between 12 and 128 characters)"
+      "How long would you like your password to be? (between 8 and 128 characters)"
     );
     passwordLength = parseInt(passwordLength);
-  } while (passwordLength < 12 || passwordLength > 128);
+  } while (passwordLength < 8 || passwordLength > 128);
   while (confirmedSelections == "") {
     var lowerCase = confirm("Would you like to include lowercase letters?");
     var upperCase = confirm("Would you like to include uppercase letters?");
