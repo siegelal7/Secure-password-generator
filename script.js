@@ -22,28 +22,27 @@ function generatePassword() {
     );
     passwordLength = parseInt(passwordLength);
   } while (passwordLength < 8 || passwordLength > 128);
-  {
-    while (confirmedSelections == "") {
-      var lowerCase = confirm("Would you like to include lowercase letters?");
-      var upperCase = confirm("Would you like to include uppercase letters?");
-      var numbers = confirm("Would you like to include numbers?");
-      var chars = confirm("Would you like to include characters?");
 
-      if (lowerCase === true) {
-        confirmedSelections += lowerLetters;
-      }
-      if (upperCase === true) {
-        confirmedSelections += upperLetters;
-      }
-      if (numbers === true) {
-        confirmedSelections += numbs;
-      }
-      if (chars === true) {
-        confirmedSelections += characters;
-      }
-      if (confirmedSelections == "") {
-        alert("please choose at least 1 character type");
-      }
+  while (confirmedSelections == "") {
+    var lowerCase = confirm("Would you like to include lowercase letters?");
+    var upperCase = confirm("Would you like to include uppercase letters?");
+    var numbers = confirm("Would you like to include numbers?");
+    var chars = confirm("Would you like to include characters?");
+
+    if (lowerCase === true) {
+      confirmedSelections += lowerLetters;
+    }
+    if (upperCase === true) {
+      confirmedSelections += upperLetters;
+    }
+    if (numbers === true) {
+      confirmedSelections += numbs;
+    }
+    if (chars === true) {
+      confirmedSelections += characters;
+    }
+    if (confirmedSelections == "") {
+      alert("please choose at least 1 character type");
     }
   }
 
