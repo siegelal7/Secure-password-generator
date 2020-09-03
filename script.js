@@ -16,6 +16,7 @@ function generatePassword() {
   var characters = "!@#$%^&*()";
   var numbs = "1234567890";
   var confirmedSelections = "";
+
   do {
     var passwordLength = prompt(
       "How long would you like your password to be? (between 8 and 128 characters)"
@@ -46,16 +47,16 @@ function generatePassword() {
     }
   }
 
-  var returnedValue = "";
+  var yourPassword = "";
   for (var i = 0, n = confirmedSelections.length; i < passwordLength; i++) {
     var index = Math.floor(Math.random() * n);
-    returnedValue += confirmedSelections.charAt(index);
+    yourPassword += confirmedSelections.charAt(index);
   }
-  if (returnedValue.length < 8) {
+  if (yourPassword.length < 8) {
     alert("Please choose at least 12 characters");
   }
 
-  return returnedValue;
+  return yourPassword;
 }
 
 // find length of new string-confirmedSelections
