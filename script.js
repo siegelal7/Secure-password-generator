@@ -49,7 +49,7 @@ function generatePassword() {
     var index = Math.floor(Math.random() * n);
     returnedValue += confirmedSelections.charAt(index);
   }
-  if (returnedValue.length < 12) {
+  if (returnedValue.length < 8) {
     alert("Please choose at least 12 characters");
   }
 
